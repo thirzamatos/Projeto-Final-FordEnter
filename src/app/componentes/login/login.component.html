@@ -1,0 +1,32 @@
+<body>
+  <div class="main-section">
+    <div class="container">
+      <div class="row">
+        <!-- Coluna da Imagem -->
+        <div class="image-column">
+          <img class="login-car" src="http://localhost:4200/img/ranger.png" alt="login-car">
+        </div>
+        <!-- Coluna do Formulário -->
+        <div class="form-column">
+          <div class="login">
+            <div class="text-center mb-4">
+              <h1 class="title">Boas-Vindas</h1>
+            </div>
+            <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)" class="login-forms">
+              <div class="form-floating mb-3 position-relative">
+                <input type="text" required #usuario="ngModel" class="input" id="usuario" name="usuario" placeholder="Login" ngModel>
+              </div>
+              <div class="form-floating mb-3 position-relative">
+                <input required #senha="ngModel" type="password" class="input" id="senha" name="senha" placeholder="Senha" ngModel>
+              </div>
+              <button class="botao-login" [disabled]="loginForm.invalid">Entrar</button>
+            </form>
+            <div *ngIf="mensagemDeErro" class="mensagem-erro text-center">
+              {{ mensagemDeErro }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,109 @@
+.main-section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(18, 117, 255), rgb(7, 7, 120), black);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.image-column, .form-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #d4d4d4, #a6a6a6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 
+              inset 0 1px 2px rgba(255, 255, 255, 0.5), 
+              inset 0 -1px 2px rgba(0, 0, 0, 0.2);
+  border: 1px solid #b0b0b0;
+}
+
+.login-car {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  color: rgb(9, 9, 169);
+  font-size: 24px;
+  font-family: 'Montserrat';
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.login-forms {
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 347px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mensagem-erro {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.botao-login {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(9, 9, 169);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-login:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.botao-login:hover:not(:disabled) {
+  background-color: rgb(7, 7, 120);
+}

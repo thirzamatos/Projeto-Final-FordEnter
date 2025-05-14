@@ -1,0 +1,124 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 15px;
+  background: linear-gradient(145deg, #d4d4d4, #a6a6a6);
+}
+
+.dashboard-title {
+  text-align: center;
+  color: rgb(9, 9, 169);
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.vehicle-selection {
+  margin-bottom: 15px;
+  width: 170px;
+}
+
+.vehicle-label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.vehicle-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.vehicle-metrics {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+
+.metric-box {
+  background: #ffffff;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 15%;
+  height: 20%;
+  text-align: center;
+}
+
+.metric-label {
+  color: black;
+  margin-bottom: 8px;
+}
+
+.metric-value {
+  color: rgb(9, 9, 169);
+  margin: 0;
+}
+
+.vehicle-image-container {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.vehicle-image {
+  max-width: 800px;
+  width: 600px;
+  border-radius: 8px;
+}
+
+.telemetry-table-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(145deg, #d4d4d4, #a6a6a6);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1030;
+  padding-left: 345px;
+}
+
+.telemetry-table-wrapper {
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.telemetry-table {
+  width: 70%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.telemetry-table-header{
+  background: rgb(11, 99, 222);
+}
+
+.telemetry-table th,
+.telemetry-table td {
+  border: 1px solid black;
+  padding: 6px;
+}
+
+.vin-search-group {
+  display: flex;
+  align-items: center;
+}
+
+.vin-input {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid black;
+  border-radius: 4px 0 0 4px;
+}
+
+.vin-search-button {
+  padding: 6px 12px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
