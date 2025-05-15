@@ -1,213 +1,212 @@
-.descricao{
-    font-size: 16px;
-    padding: 0 30px 0 30px;
-    text-align: justify;
+h1{
+  font-family: 'Montserrat';
+  color: rgb(9, 9, 169);
+  text-align: center;
 }
 
+strong{
+  color: #2e6cf1;
+}
+
+/* Lista de carros */
 ul.modelcars {
-    display: block;
-    text-align: center;
-    margin-bottom: 40px;
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0;
+  list-style: none;
 }
 
 ul.modelcars li {
-    margin: 20px 10px;
-    display: inline-block;
-    text-align: left;
-    width: 300px;
-    vertical-align: top;
-    border: 1px solid #a4a4a4;
-    border-radius: 4px;
-    padding: 5px;
+  margin: 20px 10px;
+  display: inline-block;
+  text-align: left;
+  width: 280px;
+  vertical-align: top;
+  border: 1px solid #a4a4a4;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 img.photocar {
-    display: block;
-    width: 250px;
+  display: block;
+  width: 250px;
+  margin: 0 auto 10px auto;
+  transition: width 0.3s ease;
+  border-radius: 6px;
 }
 
 img.photocar:hover {
-    width: 255px;
+  width: 260px;
+}
+
+.infocar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .checkbox {
-    width: 25px;
-    height: 25px;
-    border: 1px solid #1b357e;
-}
-
-.checkbox:hover {
-    cursor: pointer;
-}
-
-.infocar div {
-    display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #1b357e;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .textmodel {
-    display: block;
-    text-align: left;
-    font-size: 12px;
-    color: #1351d8;
-    
+  display: block;
+  font-size: 14px;
+  color: #1351d8;
+  font-weight: 600;
 }
+
 .textprice {
-    display: block;
-    text-align: left;
-    font-size: 10px;
-    padding-right: 90px;
+  display: block;
+  font-size: 12px;
+  color: #333;
 }
 
-table {
-    border-collapse: collapse;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2vh;
-    margin-bottom: 10px;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-
-  td:nth-child(1) {  
-    font-weight: 700;
-    width: 40%;
-  }
-
-  tr:nth-child(even) {background-color: #f2f2f2;}
-
-#compare {
-    position: absolute;
-    display: none;
-    width: 50vw;
-    height: 55vh;
-    z-index: 1000;
-    background: #fff;
-    top: calc(100vh - 80%);
-    left: 25vw;
-    border-radius: 10px;
-    padding: 10px;
-    -webkit-box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
-    box-shadow: 1px 1px 6px 0px rgb(0 0 0 / 34%);
+/* Botão Comparar Carros */
+div[style*="text-align: center"] button {
+  height: 40px;
+  width: 200px;
+  background-color: #1351d8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+div[style*="text-align: center"] button:hover {
+  background-color: #0d3a9a;
+}
+
+/* Overlay do modal */
 #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+/* Modal de comparação */
+#compare {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 900px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 30px 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+#compare button {
+  align-self: flex-end;
+  padding: 8px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #1351d8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#compare button:hover {
+  background-color: #0d3a9a;
+}
+
+#compare h2 {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* Container das comparações */
+#compare > div[style*="display: flex"] {
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Cada bloco de carro no modal */
+#compare > div[style*="display: flex"] > div {
+  flex: 1 1 45%;
+  min-width: 280px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#compare img.image-compare {
+  width: 270px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+#compare div > div {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.name-car{
+  color: #1b357e;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+  ul.modelcars li {
+    width: 45vw;
+  }
+
+  #compare {
+    width: 90vw;
+    max-height: 70vh;
+    padding: 15px 20px 20px;
+  }
+
+  #compare > div[style*="display: flex"] > div {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 560px) {
+  ul.modelcars li {
+    width: 90vw;
+  }
+
+  img.photocar {
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
-    z-index: 999; /* Fica sobre todos os elementos da página */
-    display: none;
-}
+  }
 
-.div_button-close{
-    padding-bottom: 20px;
-}
+  #compare {
+    width: 95vw;
+    max-height: 60vh;
+    padding: 10px 15px 15px;
+  }
 
-.button-close{
-    height: 40px;
-    width: 200px;
-}
-
-@media (max-width: 1500px){
-    .textprice{
-        font-size: 11px;
-    }
-
-    #compare{
-        height: 80vh;
-    }
-
-    td{
-        font-size: 14px;
-    }
-
-    footer{
-        padding-bottom: 41px;
-    }
-}
-
-@media(max-width: 1024px){
-
-    .descricao{
-        font-size: 15px;
-    }
-    #compare {
-        width: 60vw;
-        height: 100vh;
-        left: 10vw;
-    }
-    
-    .textmodel {
-        font-size: 12px;
-    }
-
-    .textprice{
-        font-size: 11px;
-    }
-
-    
-}
-
-@media (max-width: 840px){
-
-    .descricao{
-        font-size: 15px;
-    }
-
-    #compare {
-        width: 90vw;
-        height: 90vh;
-        left: 1vw;
-    }
-
-    td{
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 560px){
-    iframe{
-        width: 100%;
-        height: 300px;
-    }
-}
-
-@media (max-width: 344px){
-    .descricao{
-        font-size: 13px;
-    }
-
-    img.photocar{
-        width: 200px;
-    }
-
-    .informacao{
-        width: 17px;
-    }
-
-    td{
-        font-size: 9px;
-        padding: 3px;
-    }
-
-    #compare {
-        width: 90vw;
-        height: 75vh;
-        padding: 1px;
-    }
-
-    .div_button-close{
-        padding-bottom: 5px;
-    }
-
-    .button-close{
-        font-size: 10px;
-        height: 25px;
-        width: 100px;
-    }
+  #compare button {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+  }
 }

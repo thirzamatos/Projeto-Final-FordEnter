@@ -1,120 +1,64 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-lancamento',
   standalone: true,
-  imports: [
-    CommonModule,
-    MenuComponent
-  ],
+  imports: [CommonModule, MenuComponent],
   templateUrl: './lancamento.component.html',
   styleUrls: ['./lancamento.component.css']
 })
 export class LancamentoComponent {
-  carArr: Car[] = [];
+  constructor(private cdr: ChangeDetectorRef) {}
 
-  SetCarToCompare(el: HTMLInputElement, carClass: Car): void {
-    if (carClass instanceof Car) {
-      if (el.checked) {
-        if (this.carArr.length >= 2) {
-          alert("Você só pode comparar 2 carros por vez");
-          el.checked = false;
-          return;
-        }
-        this.carArr.push(carClass);
-      } else {
-        const index = this.GetCarArrPosition(this.carArr, carClass);
-        if (index !== -1) {
-          this.carArr.splice(index, 1);
-        }
+  cars: Car[] = [
+    new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, '2.2', 160, 1420, 'Aço Estampado 16', 'http://localhost:4200/img/XL_Cabine.png'),
+    new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, '2.2', 160, 1180, 'Aço Estampado 16', 'http://localhost:4200/img/xls2.2.png'),
+    new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, '3.2', 200, 1180, 'Liga Leve 17', 'http://localhost:4200/img/storm.png')
+  ];
+
+  selectedCarsSet: Set<string> = new Set();
+  selectedCar1: Car | null = null;
+  selectedCar2: Car | null = null;
+  showCompareFlag = false;
+
+  SetCarToCompare(event: Event): void {
+    const el = event.target as HTMLInputElement;
+    const carName = el.getAttribute('data-car-name');
+    if (!carName) return;
+
+    if (el.checked) {
+      if (this.selectedCarsSet.size >= 2) {
+        alert("Você só pode comparar 2 carros por vez");
+        el.checked = false;
+        return;
       }
+      this.selectedCarsSet.add(carName);
     } else {
-      throw "You need to set a Car instance";
+      this.selectedCarsSet.delete(carName);
     }
-  }
-
-  GetCarArrPosition(arr: Car[], carClass: Car): number {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].nome === carClass.nome) return i;
-    }
-    return -1;
   }
 
   ShowCompare(): void {
-    if (this.carArr.length < 2) {
+    if (this.selectedCarsSet.size < 2) {
       alert("Precisa marcar 2 carros para apresentar a comparação");
       return;
     }
 
-    this.UpdateCompareTable();
-    document.getElementById("compare")!.style.display = "block";
-    document.getElementById("overlay")!.style.display = "block";
+    const selectedCars = this.cars.filter(car => this.selectedCarsSet.has(car.nome));
+    this.selectedCar1 = selectedCars[0];
+    this.selectedCar2 = selectedCars[1];
+    this.showCompareFlag = true;
+
+    this.cdr.detectChanges(); // força atualização da tela
   }
 
   HideCompare(): void {
-    document.getElementById("compare")!.style.display = "none";
-    document.getElementById("overlay")!.style.display = "none";
-  }
-
-  UpdateCompareTable(): void {
-    const car1 = this.carArr[0];
-    const car2 = this.carArr[1];
-
-    if (!car1 || !car2) {
-      console.error("Car data is missing.");
-      return;
-    }
-
-    const setInnerText = (id: string, text: string) => {
-      const el = document.getElementById(id);
-      if (el) el.innerText = text;
-    };
-
-    const setImage = (id: string, src: string, alt: string) => {
-      const el = document.getElementById(id);
-      if (el) el.innerHTML = `<img src="${src}" alt="${alt}" style="width:100px;">`;
-    };
-
-    setImage("compare_image_0", car1.image, car1.nome);
-    setImage("compare_image_1", car2.image, car2.nome);
-
-    setInnerText("compare_modelo_0", car1.nome);
-    setInnerText("compare_modelo_1", car2.nome);
-
-    setInnerText("compare_alturacacamba_0", `${car1.alturaCacamba} mm`);
-    setInnerText("compare_alturacacamba_1", `${car2.alturaCacamba} mm`);
-
-    setInnerText("compare_alturaveiculo_0", `${car1.alturaVeiculo} mm`);
-    setInnerText("compare_alturaveiculo_1", `${car2.alturaVeiculo} mm`);
-
-    setInnerText("compare_alturasolo_0", `${car1.alturaSolo} mm`);
-    setInnerText("compare_alturasolo_1", `${car2.alturaSolo} mm`);
-
-    setInnerText("compare_capacidadecarga_0", `${car1.capacidadeCarga} kg`);
-    setInnerText("compare_capacidadecarga_1", `${car2.capacidadeCarga} kg`);
-
-    setInnerText("compare_motor_0", car1.motor);
-    setInnerText("compare_motor_1", car2.motor);
-
-    setInnerText("compare_potencia_0", `${car1.potencia} cv`);
-    setInnerText("compare_potencia_1", `${car2.potencia} cv`);
-
-    setInnerText("compare_volumecacamba_0", `${car1.volumeCacamba} L`);
-    setInnerText("compare_volumecacamba_1", `${car2.volumeCacamba} L`);
-
-    setInnerText("compare_roda_0", `${car1.roda}`);
-    setInnerText("compare_roda_1", `${car2.roda}`);
-    
-    setInnerText("compare_preco_0", `R$ ${car1.preco.toLocaleString('pt-BR')}`);
-    setInnerText("compare_preco_1", `R$ ${car2.preco.toLocaleString('pt-BR')}`);
-
-    // Limpa os checkboxes
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => (checkbox as HTMLInputElement).checked = false);
-
-    this.carArr = [];
+    this.showCompareFlag = false;
+    this.selectedCar1 = null;
+    this.selectedCar2 = null;
+    this.selectedCarsSet.clear();
   }
 }
 
