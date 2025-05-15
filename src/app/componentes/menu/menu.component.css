@@ -78,3 +78,8 @@
     padding: 8px 0;
     display: block;
 }
+
+.botao-saida{
+    width: 50px;
+    height: 40px;
+}
