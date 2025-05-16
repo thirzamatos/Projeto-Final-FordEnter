@@ -3,6 +3,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 import { LancamentoComponent } from './componentes/lancamento/lancamento.component';
+import { ContatoComponent } from './componentes/contato/contato.component';
 
 export const routes: Routes = [
     {
@@ -12,7 +13,7 @@ export const routes: Routes = [
     },
     {
         path: 'login',
-        component: LoginComponent   
+        component: LoginComponent
     },
     {
         path: 'home',
@@ -26,5 +27,9 @@ export const routes: Routes = [
     {
         path: 'lancamento',
         component: LancamentoComponent
+    },
+    {
+      path: 'contato',
+      component: ContatoComponent
     }
 ];

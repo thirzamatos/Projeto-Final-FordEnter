@@ -1,0 +1,73 @@
+<div class="contato-container">
+
+  <app-menu></app-menu>
+
+  <main>
+    <div class="forms">
+      <div>
+        <img src="http://localhost:4200/img/mustang.png" class="img-form">
+      </div>
+      <div class="contato">
+
+        <div class="title-h2">
+          <h2>Sobre Você</h2>
+        </div>
+
+
+        <form #form="ngForm" (ngSubmit)="post(form)" novalidate>
+          <input type="text" name="nome" placeholder="NOME*" class="fordform" required ngModel>
+
+
+          <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required ngModel>
+
+
+          <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required ngModel>
+
+
+          <input type="text" name="cpf" placeholder="CPF*" class="fordform" id="cpfId" required ngModel>
+
+
+          <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" id="telId" required ngModel>
+
+
+          <select name="tipoContato" class="fordform" required ngModel>
+            <option value="" disabled selected>COMO DESEJA SER CONTATADO</option>
+            <option value="TELEFONE">TELEFONE</option>
+            <option value="EMAIL">E-MAIL</option>
+          </select>
+
+
+          <select name="tipoMensagem" class="fordform" required ngModel>
+            <option value="" disabled selected>TIPO DE MENSAGEM</option>
+            <option value="RECLAMACAO">RECLAMAÇÃO</option>
+            <option value="ELOGIO">ELOGIO</option>
+            <option value="SUGESTAO">SUGESTÃO</option>
+          </select>
+
+
+          <textarea name="mensagem" placeholder="MENSAGEM" class="fordform" required ngModel></textarea>
+
+
+          <p id="termos">
+            Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você.
+            <br>A qualquer momento, será possível editar ou remover tais dados.
+          </p>
+          <br>
+          <input type="checkbox" name="termos" required ngModel>
+          Sim. Li e concordo com os
+          <a href="https://www.ford.com.br/politica-de-privacidade/" id="priv-link">Termos e Condições.</a>
+          <br>
+
+
+          <input type="checkbox" name="newsletter" ngModel>
+          Desejo receber novidades e promoções da Ford por e-mail
+          <br><br>
+
+
+          <button type="submit" class="button-send" [disabled]="form.invalid">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</div>
