@@ -2,6 +2,7 @@
 .header {
     width: 100%;
     padding: 10px 20px;
+    
 }
 
 .header .navbar {
@@ -90,4 +91,107 @@
 
 .botao-saida:hover {
   background-color: rgb(7, 7, 120);
+}
+
+/* MEDIA QUERIES: ajustes para telas menores */
+/* 4K e Ultrawide */
+@media (min-width: 1601px) {
+    .offcanvas {
+        width: 300px;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 28px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 20px;
+    }
+
+    .botao-saida {
+        font-size: 18px;
+        height: 44px;
+        max-width: 300px;
+    }
+}
+
+/* Laptops e telas comuns */
+@media (max-width: 1440px) {
+    .offcanvas .offcanvas-title {
+        font-size: 24px;
+    }
+}
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+    .offcanvas {
+        width: 220px;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 22px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .botao-saida {
+        max-width: 200px;
+    }
+}
+
+/* Tablets pequenos */
+@media (max-width: 768px) {
+    .header .navbar .nav-links {
+        display: none;
+    }
+
+    .offcanvas {
+        width: 80%;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 20px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 15px;
+    }
+
+    .botao-saida {
+        font-size: 15px;
+    }
+}
+
+/* Smartphones grandes */
+@media (max-width: 600px) {
+    .offcanvas .offcanvas-title {
+        font-size: 18px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    .botao-saida {
+        font-size: 14px;
+        height: 36px;
+    }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 400px) {
+    .offcanvas .offcanvas-title {
+        font-size: 16px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 13px;
+    }
+
+    .botao-saida {
+        font-size: 13px;
+        height: 34px;
+    }
 }

@@ -1,11 +1,16 @@
 /* Centralizar a imagem no main */
+.header{
+    background-color: #efefef;
+}
+
 main {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     height: 100vh; /* Ocupa a altura total da tela */
     padding: 0;
-    margin: 5px auto;
+    margin: 0;
+    background-color: #efefef;
 }
 
 .imagem {
@@ -51,4 +56,77 @@ main {
     color: rgb(13, 65, 137);
     font-weight: bold;
     text-align: left;
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+/* Monitores ultrawide e 4K */
+@media (min-width: 1601px) {
+  .imagem {
+    width: 1100px;
+  }
+
+  .imagem .caixa-mensagem .titulo {
+    font-size: 34px;
+  }
+
+  .imagem .caixa-mensagem .texto {
+    font-size: 24px;
+  }
+}
+
+/* Laptops e desktops padrão */
+@media (max-width: 1200px) {
+  .imagem {
+    width: 90%;
+  }
+
+  .imagem .caixa-mensagem .titulo {
+    font-size: 28px;
+  }
+
+  .imagem .caixa-mensagem .texto {
+    font-size: 18px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .imagem {
+    width: 95%;
+    margin-bottom: 60px;
+  }
+
+  .imagem .caixa-mensagem {
+    padding: 15px;
+  }
+
+  .imagem .caixa-mensagem .titulo {
+    font-size: 24px;
+  }
+
+  .imagem .caixa-mensagem .texto {
+    font-size: 16px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .imagem {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .imagem .caixa-mensagem {
+    padding: 10px;
+  }
+
+  .imagem .caixa-mensagem .titulo {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .imagem .caixa-mensagem .texto {
+    font-size: 14px;
+  }
 }

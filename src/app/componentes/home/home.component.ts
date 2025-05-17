@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
 import { MenuComponent } from '../menu/menu.component';
+import { FooterComponent } from '../footer/footer.component';
 
 
 @Component({
@@ -16,7 +17,8 @@ import { MenuComponent } from '../menu/menu.component';
   imports: [
     CommonModule, 
     FormsModule, 
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ]
 })
 

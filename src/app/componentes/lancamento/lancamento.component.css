@@ -1,3 +1,12 @@
+.header, .body{
+  background-color: #efefef;
+}
+
+.body{
+  height: 100vh;
+  padding-top: 90px;
+}
+
 h1{
   font-family: 'Montserrat';
   color: rgb(9, 9, 169);
@@ -21,7 +30,7 @@ ul.modelcars li {
   margin: 20px 10px;
   display: inline-block;
   text-align: left;
-  width: 280px;
+  width: 450px;
   vertical-align: top;
   border: 1px solid #a4a4a4;
   border-radius: 4px;
@@ -31,8 +40,8 @@ ul.modelcars li {
 
 img.photocar {
   display: block;
-  width: 250px;
-  margin: 0 auto 10px auto;
+  width: 200px;
+  margin: 0 auto 5px auto;
   transition: width 0.3s ease;
   border-radius: 6px;
 }
@@ -208,5 +217,133 @@ div[style*="text-align: center"] button:hover {
   #compare button {
     font-size: 0.9rem;
     padding: 6px 16px;
+  }
+}
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+/* 4K e Ultrawide */
+@media (min-width: 1601px) {
+  ul.modelcars li {
+    width: 500px;
+  }
+
+  #compare {
+    width: 70vw;
+    max-width: 1200px;
+  }
+
+  #compare img.image-compare {
+    width: 320px;
+  }
+
+  #compare h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Laptops padrão */
+@media (max-width: 1440px) {
+  ul.modelcars li {
+    width: 400px;
+  }
+
+  #compare img.image-compare {
+    width: 250px;
+  }
+}
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  ul.modelcars li {
+    width: 45vw;
+  }
+
+  #compare {
+    width: 90vw;
+    padding: 18px 25px 25px;
+  }
+
+  #compare > div[style*="display: flex"] > div {
+    flex: 1 1 100%;
+  }
+
+  #compare img.image-compare {
+    width: 220px;
+  }
+}
+
+/* Tablets pequenos */
+@media (max-width: 768px) {
+  ul.modelcars li {
+    width: 85vw;
+  }
+
+  img.photocar {
+    width: 100%;
+  }
+
+  #compare {
+    width: 95vw;
+    max-height: 70vh;
+    padding: 15px 20px 20px;
+  }
+
+  #compare h2 {
+    font-size: 1.5rem;
+  }
+
+  #compare button {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+}
+
+/* Smartphones grandes */
+@media (max-width: 560px) {
+  ul.modelcars li {
+    width: 90vw;
+  }
+
+  #compare {
+    padding: 12px 15px 15px;
+  }
+
+  #compare img.image-compare {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  #compare h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Smartphones pequenos */
+@media (max-width: 400px) {
+  ul.modelcars li {
+    width: 95vw;
+  }
+
+  #compare h2 {
+    font-size: 1.2rem;
+  }
+
+  #compare button {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+  }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .textmodel {
+    font-size: 13px;
+  }
+
+  .textprice {
+    font-size: 11px;
   }
 }

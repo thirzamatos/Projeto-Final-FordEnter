@@ -8,11 +8,8 @@
         <img src="http://localhost:4200/img/mustang.png" class="img-form">
       </div>
       <div class="contato">
-
-        <div class="title-h2">
-          <h2>Sobre Você</h2>
-        </div>
-
+        
+          <h2 class="title-h2">Sobre Você</h2>
 
         <form #form="ngForm" (ngSubmit)="post(form)" novalidate>
           <input type="text" name="nome" placeholder="NOME*" class="fordform" required ngModel>
@@ -52,12 +49,11 @@
             Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você.
             <br>A qualquer momento, será possível editar ou remover tais dados.
           </p>
-          <br>
+          
           <input type="checkbox" name="termos" required ngModel>
           Sim. Li e concordo com os
           <a href="https://www.ford.com.br/politica-de-privacidade/" id="priv-link">Termos e Condições.</a>
           <br>
-
 
           <input type="checkbox" name="newsletter" ngModel>
           Desejo receber novidades e promoções da Ford por e-mail
@@ -71,3 +67,7 @@
   </main>
 
 </div>
+
+<footer>
+  <app-footer></app-footer>
+</footer>
