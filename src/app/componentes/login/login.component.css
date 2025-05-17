@@ -111,3 +111,110 @@ form {
 .botao-login:hover:not(:disabled) {
   background-color: rgb(7, 7, 120);
 }
+
+/* Responsividade - Telas muito grandes (4K, ultrawide) */
+@media (min-width: 1601px) {
+  .main-section {
+    gap: 80px;
+    padding: 60px 80px;
+  }
+
+  .login {
+    max-width: 450px;
+  }
+
+  .login-car {
+    height: 400px;
+  }
+}
+
+/* Telas grandes (notebooks/desktops normais) */
+@media (max-width: 1440px) {
+  .container {
+    padding: 20px 40px;
+  }
+
+  .login-car {
+    height: 280px;
+  }
+}
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .main-section {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .image-column {
+    order: 2;
+  }
+
+  .form-column {
+    order: 1;
+  }
+
+  .login {
+    width: 90%;
+  }
+
+  .login-car {
+    height: 220px;
+  }
+}
+
+/* Tablets pequenos */
+@media (max-width: 768px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .login-car {
+    height: 180px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 600px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .input,
+  .botao-login,
+  .mensagem-erro {
+    max-width: 100%;
+  }
+
+  .login-car {
+    height: 150px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 400px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .login {
+    padding: 16px;
+  }
+
+  .login-car {
+    height: 120px;
+  }
+
+  .input {
+    font-size: 14px;
+  }
+
+  .botao-login {
+    font-size: 14px;
+  }
+}

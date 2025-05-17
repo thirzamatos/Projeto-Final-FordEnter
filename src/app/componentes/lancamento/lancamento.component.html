@@ -1,69 +1,80 @@
-<app-menu></app-menu>
+<header class="header">
+  <app-menu></app-menu>
+</header>
 
-<h1>Comparação de Carros</h1>
+<body class="body">
+  
+  <h1>Comparação de Carros</h1>
 
-<div>
-  <ul class="modelcars">
-    <li *ngFor="let car of cars">
-      <img [src]="car.image" class="photocar" [alt]="car.nome">
-      <div class="infocar">
-        <div>
-          <input
-            type="checkbox"
-            class="checkbox"
-            [checked]="selectedCarsSet.has(car.nome)"
-            (change)="SetCarToCompare($event)"
-            [attr.data-car-name]="car.nome"
-          >
+  <div>
+    <ul class="modelcars">
+      <li *ngFor="let car of cars">
+        <img [src]="car.image" class="photocar" [alt]="car.nome">
+        <div class="infocar">
+          <div>
+            <input
+              type="checkbox"
+              class="checkbox"
+              [checked]="selectedCarsSet.has(car.nome)"
+              (change)="SetCarToCompare($event)"
+              [attr.data-car-name]="car.nome"
+            >
+          </div>
+          <div class="info">
+            <span class="textmodel">{{ car.nome }}</span>
+            <span class="textprice">Preço Sugerido: R$ {{ car.preco | number:'1.0-0' }}</span>
+          </div>
         </div>
-        <div class="info">
-          <span class="textmodel">{{ car.nome }}</span>
-          <span class="textprice">Preço Sugerido: R$ {{ car.preco | number:'1.0-0' }}</span>
-        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div style="text-align: center; padding-bottom: 20px;">
+    <button type="button" style="height: 40px; width: 200px;" (click)="ShowCompare()">Comparar Carros</button>
+  </div>
+
+  <!-- Overlay -->
+  <div *ngIf="showCompareFlag" id="overlay"></div>
+
+  <!-- Modal de comparação -->
+  <div *ngIf="showCompareFlag" id="compare">
+    <button (click)="HideCompare()">Fechar</button>
+    <h2>Comparação de Carros</h2>
+
+    <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+      <div *ngIf="selectedCar1">
+        <img class="image-compare" [src]="selectedCar1.image" [alt]="selectedCar1.nome">
+        <div><strong class="name-car">{{ selectedCar1.nome }}</strong></div>
+        <div><strong>Altura Caçamba: </strong> {{ selectedCar1.alturaCacamba }} mm</div>
+        <div><strong>Altura Veículo: </strong> {{ selectedCar1.alturaVeiculo }} mm</div>
+        <div><strong>Altura Solo: </strong> {{ selectedCar1.alturaSolo }} mm</div>
+        <div><strong>Capacidade de Carga: </strong> {{ selectedCar1.capacidadeCarga }} kg</div>
+        <div><strong>Motor: </strong> {{ selectedCar1.motor }}</div>
+        <div><strong>Potência: </strong> {{ selectedCar1.potencia }} cv</div>
+        <div><strong>Volume Caçamba: </strong> {{ selectedCar1.volumeCacamba }} L</div>
+        <div><strong>Roda: </strong> {{ selectedCar1.roda }}</div>
+        <div><strong>Preço: </strong> R$ {{ selectedCar1.preco | number:'1.0-0' }}</div>
       </div>
-    </li>
-  </ul>
-</div>
 
-<div style="text-align: center; padding-bottom: 20px;">
-  <button type="button" style="height: 40px; width: 200px;" (click)="ShowCompare()">Comparar Carros</button>
-</div>
-
-<!-- Overlay -->
-<div *ngIf="showCompareFlag" id="overlay"></div>
-
-<!-- Modal de comparação -->
-<div *ngIf="showCompareFlag" id="compare">
-  <button (click)="HideCompare()">Fechar</button>
-  <h2>Comparação de Carros</h2>
-
-  <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-    <div *ngIf="selectedCar1">
-      <img class="image-compare" [src]="selectedCar1.image" [alt]="selectedCar1.nome">
-      <div><strong class="name-car">{{ selectedCar1.nome }}</strong></div>
-      <div><strong>Altura Caçamba: </strong> {{ selectedCar1.alturaCacamba }} mm</div>
-      <div><strong>Altura Veículo: </strong> {{ selectedCar1.alturaVeiculo }} mm</div>
-      <div><strong>Altura Solo: </strong> {{ selectedCar1.alturaSolo }} mm</div>
-      <div><strong>Capacidade de Carga: </strong> {{ selectedCar1.capacidadeCarga }} kg</div>
-      <div><strong>Motor: </strong> {{ selectedCar1.motor }}</div>
-      <div><strong>Potência: </strong> {{ selectedCar1.potencia }} cv</div>
-      <div><strong>Volume Caçamba: </strong> {{ selectedCar1.volumeCacamba }} L</div>
-      <div><strong>Roda: </strong> {{ selectedCar1.roda }}</div>
-      <div><strong>Preço: </strong> R$ {{ selectedCar1.preco | number:'1.0-0' }}</div>
-    </div>
-
-    <div *ngIf="selectedCar2">
-      <img class="image-compare" [src]="selectedCar2.image" [alt]="selectedCar2.nome">
-      <div><strong class="name-car">{{ selectedCar2.nome }}</strong></div>
-      <div><strong>Altura Caçamba: </strong> {{ selectedCar2.alturaCacamba }} mm</div>
-      <div><strong>Altura Veículo: </strong> {{ selectedCar2.alturaVeiculo }} mm</div>
-      <div><strong>Altura Solo: </strong> {{ selectedCar2.alturaSolo }} mm</div>
-      <div><strong>Capacidade de Carga: </strong> {{ selectedCar2.capacidadeCarga }} kg</div>
-      <div><strong>Motor: </strong> {{ selectedCar2.motor }}</div>
-      <div><strong>Potência: </strong> {{ selectedCar2.potencia }} cv</div>
-      <div><strong>Volume Caçamba: </strong> {{ selectedCar2.volumeCacamba }} L</div>
-      <div><strong>Roda: </strong> {{ selectedCar2.roda }}</div>
-      <div><strong>Preço: </strong> R$ {{ selectedCar2.preco | number:'1.0-0' }}</div>
+      <div *ngIf="selectedCar2">
+        <img class="image-compare" [src]="selectedCar2.image" [alt]="selectedCar2.nome">
+        <div><strong class="name-car">{{ selectedCar2.nome }}</strong></div>
+        <div><strong>Altura Caçamba: </strong> {{ selectedCar2.alturaCacamba }} mm</div>
+        <div><strong>Altura Veículo: </strong> {{ selectedCar2.alturaVeiculo }} mm</div>
+        <div><strong>Altura Solo: </strong> {{ selectedCar2.alturaSolo }} mm</div>
+        <div><strong>Capacidade de Carga: </strong> {{ selectedCar2.capacidadeCarga }} kg</div>
+        <div><strong>Motor: </strong> {{ selectedCar2.motor }}</div>
+        <div><strong>Potência: </strong> {{ selectedCar2.potencia }} cv</div>
+        <div><strong>Volume Caçamba: </strong> {{ selectedCar2.volumeCacamba }} L</div>
+        <div><strong>Roda: </strong> {{ selectedCar2.roda }}</div>
+        <div><strong>Preço: </strong> R$ {{ selectedCar2.preco | number:'1.0-0' }}</div>
+      </div>
     </div>
   </div>
-</div>
+
+</body>
+
+<footer>
+  <app-footer></app-footer>
+</footer>
+

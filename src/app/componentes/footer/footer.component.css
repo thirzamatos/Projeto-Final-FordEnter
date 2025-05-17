@@ -1,0 +1,65 @@
+.rodape{
+    background-color: #1b357e;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9375rem;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    padding: 0.3125em 0.25em;
+}
+
+.redes_sociais{
+    display: flex;
+    gap: 0.625em;
+}
+
+.logo__redes_sociais{
+    margin-top: 0.625em;
+    width: 1.25em;
+}
+
+.rodape__imagem{
+    margin: 0.3125em 0.625em 0.3125em;
+}
+
+/* Responsividade */
+
+/* Telas até 768px (tablets) */
+@media (max-width: 768px) {
+  .rodape {
+    flex-direction: column;
+    padding: 0.8em 1em;
+    font-size: 0.875rem;
+  }
+
+  .redes_sociais {
+    justify-content: center;
+    margin-top: 0.5em;
+  }
+
+  .rodape__imagem {
+    margin: 0.5em auto;
+  }
+}
+
+/* Telas até 480px (celulares) */
+@media (max-width: 480px) {
+  .rodape {
+    font-size: 0.8rem;
+    padding: 1em 0.5em;
+    text-align: center;
+  }
+
+  .logo__redes_sociais {
+    width: 1em;
+  }
+
+  .rodape__imagem {
+    height: 1.5em;
+  }
+}

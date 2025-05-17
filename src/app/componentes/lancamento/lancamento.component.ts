@@ -1,11 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-lancamento',
   standalone: true,
-  imports: [CommonModule, MenuComponent],
+  imports: [
+    CommonModule, 
+    MenuComponent,
+    FooterComponent
+  ],
   templateUrl: './lancamento.component.html',
   styleUrls: ['./lancamento.component.css']
 })

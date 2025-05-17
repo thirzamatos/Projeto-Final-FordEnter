@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { MenuComponent } from '../menu/menu.component';
 import { Contato } from '../interfaces/Contato';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-contato',
@@ -10,7 +11,8 @@ import { Contato } from '../interfaces/Contato';
   imports: [
     CommonModule,
     FormsModule,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.css']

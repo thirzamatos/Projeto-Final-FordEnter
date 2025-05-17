@@ -4,6 +4,7 @@ import { Vehicle, SelectedVehicleData } from '../interfaces/Dashboard.component'
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from '../menu/menu.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,7 +14,7 @@ import { MenuComponent } from '../menu/menu.component';
   imports: [
     CommonModule, 
     FormsModule, 
-    MenuComponent
+    MenuComponent,
   ],
 })
 
