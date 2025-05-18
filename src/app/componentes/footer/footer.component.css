@@ -17,6 +17,9 @@
     display: flex;
     gap: 0.625em;
 }
+.redes_sociais p{
+  margin-top: 0.625em;
+}
 
 .logo__redes_sociais{
     margin-top: 0.625em;
