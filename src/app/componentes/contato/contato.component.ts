@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask'
 import { MenuComponent } from '../menu/menu.component';
 import { Contato } from '../interfaces/Contato';
 import { FooterComponent } from '../footer/footer.component';
@@ -11,9 +12,11 @@ import { FooterComponent } from '../footer/footer.component';
   imports: [
     CommonModule,
     FormsModule,
+    NgxMaskDirective,
     MenuComponent,
     FooterComponent
   ],
+  providers: [provideNgxMask()],
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.css']
 })

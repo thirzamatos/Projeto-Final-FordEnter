@@ -18,32 +18,31 @@ strong{
 }
 
 /* Lista de carros */
-ul.modelcars {
-  display: block;
-  text-align: center;
-  margin-bottom: 40px;
+
+.modelcars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
   padding: 0;
   list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
-ul.modelcars li {
-  margin: 20px 10px;
-  display: inline-block;
-  text-align: left;
-  width: 450px;
-  vertical-align: top;
-  border: 1px solid #a4a4a4;
-  border-radius: 4px;
-  padding: 10px;
+.modelcars li {
+  border: 1px solid #ccc;
+  padding: 15px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img.photocar {
-  display: block;
-  width: 200px;
-  margin: 0 auto 5px auto;
-  transition: width 0.3s ease;
-  border-radius: 6px;
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 img.photocar:hover {
@@ -51,6 +50,7 @@ img.photocar:hover {
 }
 
 .infocar {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -80,7 +80,7 @@ img.photocar:hover {
 /* Botão Comparar Carros */
 div[style*="text-align: center"] button {
   height: 40px;
-  width: 200px;
+  width: 150px;
   background-color: #1351d8;
   color: white;
   border: none;
@@ -88,6 +88,7 @@ div[style*="text-align: center"] button {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 30px;
 }
 
 div[style*="text-align: center"] button:hover {
