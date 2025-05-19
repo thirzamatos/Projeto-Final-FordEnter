@@ -20,8 +20,7 @@ strong{
 /* Lista de carros */
 
 .modelcars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   gap: 20px;
   padding: 0;
   list-style: none;
@@ -33,6 +32,7 @@ strong{
 .modelcars li {
   border: 1px solid #ccc;
   padding: 15px;
+  width: 45vw;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
