@@ -32,7 +32,7 @@ export class ContatoComponent {
       // Mensagem de confirmação
       this.enviar(data);
 
-      // ✅ Limpar o formulário
+      //Limpar o formulário
       form.resetForm();
     } else {
       alert("Por favor, preencha todos os campos obrigatórios.");
