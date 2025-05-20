@@ -3,7 +3,6 @@ import { RouterModule } from '@angular/router';
 import { Router, RouterLink} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { Login } from '../interfaces/Login.component';
 
