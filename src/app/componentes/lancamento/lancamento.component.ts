@@ -18,9 +18,9 @@ export class LancamentoComponent {
   constructor(private cdr: ChangeDetectorRef) {}
 
   cars: Car[] = [
-    new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, '2.2', 160, 1420, 'Aço Estampado 16', 'http://localhost:4200/img/XL_Cabine.png'),
-    new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, '2.2', 160, 1180, 'Aço Estampado 16', 'http://localhost:4200/img/xls2.2.png'),
-    new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, '3.2', 200, 1180, 'Liga Leve 17', 'http://localhost:4200/img/storm.png')
+    new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, '2.2', 160, 1420, 'Aço Estampado 16', 'https://api-fordenter-qstj.onrender.com/img/XL_Cabine.png'),
+    new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, '2.2', 160, 1180, 'Aço Estampado 16', 'https://api-fordenter-qstj.onrender.com/img/xls2.2.png'),
+    new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, '3.2', 200, 1180, 'Liga Leve 17', 'https://api-fordenter-qstj.onrender.com/img/storm.png')
   ];
 
   selectedCarsSet: Set<string> = new Set();
