@@ -4,7 +4,6 @@ import { Vehicle, SelectedVehicleData } from '../interfaces/Dashboard.component'
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from '../menu/menu.component';
-import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +13,7 @@ import { FooterComponent } from '../footer/footer.component';
   imports: [
     CommonModule, 
     FormsModule, 
-    MenuComponent,
+    MenuComponent
   ],
 })
 
@@ -35,6 +34,7 @@ export class DashboardComponent implements OnInit {
     this.apiService.getVehicles().subscribe({
       next: (res) => {
         this.vehicles = res.vehicles;
+        console.log('Vehicles loaded by select:', this.vehicles);
       },
       error: (err) => console.error(err),
     });
@@ -48,6 +48,7 @@ export class DashboardComponent implements OnInit {
     this.apiService.getVehicleData(vin).subscribe({
       next: (data) => {
         this.selectedVehicleFromSearch = data;
+        console.log('Vehicle data:', data);
       },
       error: () => {
         this.selectedVehicleFromSearch = null;
@@ -63,6 +64,7 @@ export class DashboardComponent implements OnInit {
       this.apiService.getVehicleData(selected.vin).subscribe({
         next: (data) => {
           this.selectedVehicleFromSelect = data;
+          console.log('Selected vehicle data:', data);
         },
         error: () => {
           this.selectedVehicleFromSelect = null;
