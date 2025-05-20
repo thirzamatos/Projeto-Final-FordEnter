@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
@@ -11,8 +11,9 @@ import { Login } from '../interfaces/Login.component';
   styleUrls: ['./login.component.css'],
   standalone: true,
   imports: [
-    CommonModule, 
-    FormsModule, 
+    CommonModule,
+    FormsModule,
+    RouterModule
   ]
 })
 
@@ -32,6 +33,6 @@ export class LoginComponent {
         this.mensagemDeErro=error.error.message
       }
     })
-    
+
   }
 }

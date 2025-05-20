@@ -1,4 +1,4 @@
-<body>
+ <body>
   <div class="main-section">
     <div class="container">
       <div class="row">
@@ -40,7 +40,7 @@
               <div class="form-floating mb-3 position-relative">
                 <input required #senha="ngModel" type="password" class="input" id="senha" name="senha" placeholder="Senha" ngModel>
               </div>
-              <button class="botao-login" [disabled]="loginForm.invalid">Entrar</button>
+              <button class="botao-login" [disabled]="loginForm.invalid" type="button" [routerLink]="['/home']">Entrar</button>
             </form>
             <div *ngIf="mensagemDeErro" class="mensagem-erro text-center">
               {{ mensagemDeErro }}
