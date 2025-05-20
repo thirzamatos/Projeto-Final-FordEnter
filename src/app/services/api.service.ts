@@ -8,7 +8,7 @@ import { Vehicle, SelectedVehicleData } from '../componentes/interfaces/Dashboar
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'http://localhost:3001';
+  private baseUrl = 'https://api-fordenter-qstj.onrender.com/';
 
   constructor(private http: HttpClient) {}
 
