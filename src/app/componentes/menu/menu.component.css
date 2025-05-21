@@ -105,7 +105,7 @@
   padding-right: 10px;
 }
 
-/* MEDIA QUERIES: ajustes para telas menores */
+
 /* 4K e Ultrawide */
 @media (min-width: 1601px) {
     .offcanvas {
