@@ -25,10 +25,12 @@ Node.js: Recomendado 18.x ou superior
 
 
 Scrum:
+
 [Projeto Final_Sprint Retrospective_Thirza Midia Matos de Oliveira.pdf](https://github.com/user-attachments/files/20303079/Projeto.Final_Sprint.Retrospective_Thirza.Midia.Matos.de.Oliveira.pdf)
 
 [Projeto Final_Backlog _ Thirza Midiã Matos de Oliveira.pdf](https://github.com/user-attachments/files/20303078/Projeto.Final_Backlog._.Thirza.Midia.Matos.de.Oliveira.pdf)
 
 
+API: https://api-fordenter-qstj.onrender.com
 
 
