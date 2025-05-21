@@ -24,6 +24,7 @@
   font-weight: 600;
   display: block;
   margin-bottom: 6px;
+  margin-left: 50px;
 }
 
 .vehicle-select {
@@ -31,12 +32,13 @@
   padding: 10px;
   border: 1px solid black;
   border-radius: 4px;
+  margin-left: 50px;
 }
 
 .vehicle-metrics {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 4px;
+  margin: 4px;
 }
 
 .metric-box {
@@ -44,7 +46,7 @@
   padding: 5px;
   border: 1px solid black;
   border-radius: 8px;
-  width: 15%;
+  width: 13%;
   height: 15%;
   text-align: center;
 }
@@ -69,7 +71,8 @@
 .vehicle-image {
   max-width: 800px;
   width: 500px;
-  height: 170px;
+  max-height: 200px;
+  height: 190px;
   border-radius: 8px;
 }
 
@@ -127,7 +130,30 @@
   cursor: pointer;
 }
 
-/* Responsivo para tablets */
+/*Responsividade*/
+
+@media(max-width: 2000px){
+  .dashboard-title{
+    margin-top: 10px;
+  }
+
+  .vehicle-selection{
+    margin-left: 75px;
+  }
+
+  .dashboard-container{
+    padding: 5px;
+  }
+
+  .vehicle-image-container{
+    margin-top: 10px;
+  }
+
+  .vehicle-image{
+    width: 400px
+  }
+}
+
 @media (max-width: 900px) {
   .metric-box {
     width: 30%;

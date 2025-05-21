@@ -41,7 +41,7 @@
     <button (click)="HideCompare()">Fechar</button>
     <h2>Comparação de Carros</h2>
 
-    <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+    <div style="display: flex; justify-content: space-around; margin-top: 15px;">
       <div *ngIf="selectedCar1">
         <img class="image-compare" [src]="selectedCar1.image" [alt]="selectedCar1.nome">
         <div><strong class="name-car">{{ selectedCar1.nome }}</strong></div>

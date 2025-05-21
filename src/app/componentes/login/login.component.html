@@ -2,7 +2,7 @@
   <div class="main-section">
     <div class="container">
       <div class="row">
-        <!-- Coluna da Imagem -->
+        <!--Carrossel de imagens-->
         <div class="image-column">
           <div id="carouselLogin" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
@@ -10,7 +10,7 @@
                 <img src="https://api-fordenter-qstj.onrender.com/img/fusion.png" class="d-block w-100 login-car" alt="Fusion">
               </div>
               <div class="carousel-item">
-                <img src="https://api-fordenter-qstj.onrender.com/img/territory.png" class="d-block w-100 login-car" alt="Territory">
+                <img src="https://api-fordenter-qstj.onrender.com/img/territory.png" class="d-block w-100 login-car territory" alt="Territory">
               </div>
               <div class="carousel-item">
                 <img src="https://api-fordenter-qstj.onrender.com/img/mustang.png" class="d-block w-100 login-car" alt="Mustang">
@@ -27,7 +27,7 @@
           </div>
         </div>
 
-        <!-- Coluna do Formulário -->
+        <!--Forms-->
         <div class="form-column">
           <div class="login">
             <div class="text-center mb-4">
@@ -40,7 +40,7 @@
               <div class="form-floating mb-3 position-relative">
                 <input required #senha="ngModel" type="password" class="input" id="senha" name="senha" placeholder="Senha" ngModel>
               </div>
-              <button class="botao-login" [disabled]="loginForm.invalid" type="button" [routerLink]="['/home']">Entrar</button>
+              <button class="botao-login" [disabled]="loginForm.invalid">Entrar</button>
             </form>
             <div *ngIf="mensagemDeErro" class="mensagem-erro text-center">
               {{ mensagemDeErro }}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Router, RouterLink} from '@angular/router';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
@@ -23,6 +23,7 @@ export class LoginComponent {
 
   constructor(private router: Router, private service:ApiService) {}
 
+  //Verificação de login
   onLogin(login:Login[]): void {
     console.log('Login data:', login)
     this.service.login(login).subscribe({

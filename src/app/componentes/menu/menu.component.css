@@ -106,7 +106,7 @@
 }
 
 
-/* 4K e Ultrawide */
+/*Responsividade*/
 @media (min-width: 1601px) {
     .offcanvas {
         width: 300px;
