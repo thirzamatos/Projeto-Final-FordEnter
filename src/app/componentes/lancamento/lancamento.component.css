@@ -39,6 +39,10 @@ strong{
   align-items: center;
 }
 
+.photocar{
+  max-height: 110px;
+}
+
 img.photocar {
   max-width: 200px;
   height: auto;

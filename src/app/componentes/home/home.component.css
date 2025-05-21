@@ -53,12 +53,12 @@ main {
 
 .imagem .caixa-mensagem .texto {
     font-size: 20px;
-    color: rgb(13, 65, 137);
+    color: rgb(52, 121, 218);
     font-weight: bold;
     text-align: left;
 }
 
-/* ===================== RESPONSIVIDADE ===================== */
+/* RESPONSIVIDADE */
 
 /* Monitores ultrawide e 4K */
 @media (min-width: 1601px) {
