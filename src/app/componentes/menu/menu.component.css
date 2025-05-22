@@ -107,6 +107,26 @@
 
 
 /*Responsividade*/
+@media (max-width: 2000px){
+    #offcanvasNavbar {
+        height: 1050px;
+        top: 0px;
+        overflow-y: auto;
+    }
+
+    .offcanvas .btn-close {
+        position: relative;
+        top: 1px;
+        right: 10px;
+        z-index: 1051;
+        filter: invert(0);
+    }
+
+    .logo {
+        width: 7%;
+    }
+}
+
 @media (min-width: 1601px) {
     .offcanvas {
         width: 300px;
@@ -194,8 +214,14 @@
 
 /* Smartphones pequenos */
 @media (max-width: 400px) {
+    #offcanvasNavbar {
+        height: 1080px;
+        top: 0px;
+        overflow-y: auto;
+    }
+
     .offcanvas .offcanvas-title {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .offcanvas .navbar-nav .nav-link {
