@@ -154,7 +154,16 @@
   }
 }
 
+@media(max-width: 1080px){
+  .dashboard-title{
+    margin-top: 15px;
+  }
+}
+
 @media (max-width: 900px) {
+  .dashboard-title{
+    margin-top: 15px;
+  }
   .metric-box {
     width: 30%;
   }

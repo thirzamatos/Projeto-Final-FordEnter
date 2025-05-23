@@ -50,7 +50,7 @@ body{
 
 .login-car {
   height: auto;
-  max-width: 600px;
+  max-width: 500px;
   object-fit: contain;
   margin: 0 auto;
   display: block;
@@ -182,7 +182,7 @@ form {
   }
 }
 
-/* Celulares grandes */
+/*Responsividade 600*/
 @media (max-width: 600px) {
   .title {
     font-size: 20px;
@@ -199,8 +199,36 @@ form {
   }
 }
 
-/* Celulares pequenos */
+/*Responsividade 500*/
+@media (max-width: 500px){
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
+  .main-section{
+    height: 100vh;
+  }
+  .login{
+    width: 280px;
+  }
+  .title{
+    font-size: 30px;
+  }
+  .input{
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+/*Responsividade 400*/
 @media (max-width: 400px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
+  .main-section{
+    height: 100vh;
+  }
   .title {
     font-size: 18px;
   }
@@ -215,6 +243,7 @@ form {
 
   .input {
     font-size: 14px;
+    width: 100%;
   }
 
   .botao-login {

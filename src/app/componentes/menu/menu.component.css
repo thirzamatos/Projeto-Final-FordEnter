@@ -94,6 +94,7 @@
   border-radius: 5px;
   background-color: rgb(9, 9, 169);
   color: white;
+  margin-top: 360px;
 }
 
 .botao-saida:hover {
@@ -214,10 +215,14 @@
 
 /* Smartphones pequenos */
 @media (max-width: 400px) {
+    .header{
+        width: 100%;
+        gap: 55%;
+    }
     #offcanvasNavbar {
         height: 1080px;
         top: 0px;
-        overflow-y: auto;
+        width: 200px;
     }
 
     .offcanvas .offcanvas-title {
@@ -225,11 +230,16 @@
     }
 
     .offcanvas .navbar-nav .nav-link {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .botao-saida {
         font-size: 13px;
         height: 34px;
+        margin-top: 300px;
+    }
+    .logo{
+        width: 30%;
+        height: 50px;
     }
 }

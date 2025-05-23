@@ -10,7 +10,7 @@
     justify-content: space-between;
     bottom: 0;
     width: 100%;
-    padding: 0.3125em 0.25em;
+    padding: 5px 20px;
 }
 
 .redes_sociais{
@@ -24,10 +24,6 @@
 .logo__redes_sociais{
     margin-top: 0.625em;
     width: 1.25em;
-}
-
-.rodape__imagem{
-    margin: 0.3125em 0.625em 0.3125em;
 }
 
 /* Responsividade */
@@ -44,25 +40,22 @@
     justify-content: center;
     margin-top: 0.5em;
   }
-
-  .rodape__imagem {
-    margin: 0.5em auto;
-  }
 }
 
-/* Telas até 480px (celulares) */
-@media (max-width: 480px) {
+/*Responsividade 400*/
+@media (max-width: 400px) {
   .rodape {
-    font-size: 0.8rem;
-    padding: 1em 0.5em;
+    font-size: 10px;
     text-align: center;
+    width: 100%;
+    padding: 0px;
   }
 
-  .logo__redes_sociais {
-    width: 1em;
+  .logo__redes_sociais{
+    width: 15px;
   }
 
-  .rodape__imagem {
-    height: 1.5em;
+  p{
+    margin-bottom: 2px;
   }
 }
