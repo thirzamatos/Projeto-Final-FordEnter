@@ -44,6 +44,7 @@
 /* Menu lateral retrátil */
 .offcanvas {
     width: 250px;
+    height: 10px;
     background-color: #e6e4e4;
 }
 
@@ -94,7 +95,7 @@
   border-radius: 5px;
   background-color: rgb(9, 9, 169);
   color: white;
-  margin-top: 360px;
+  margin-top: 240px;
 }
 
 .botao-saida:hover {
@@ -102,118 +103,14 @@
 }
 
 .logo{
-  width: 7%;
-  padding-right: 10px;
+  width: 3%;
+  height: 45px;
+  padding: 5px 15px 0 0;
 }
 
 
-/*Responsividade*/
-@media (max-width: 2000px){
-    #offcanvasNavbar {
-        height: 1050px;
-        top: 0px;
-        overflow-y: auto;
-    }
+/*RESPONSIVIDADE*/
 
-    .offcanvas .btn-close {
-        position: relative;
-        top: 1px;
-        right: 10px;
-        z-index: 1051;
-        filter: invert(0);
-    }
-
-    .logo {
-        width: 7%;
-    }
-}
-
-@media (min-width: 1601px) {
-    .offcanvas {
-        width: 300px;
-    }
-
-    .offcanvas .offcanvas-title {
-        font-size: 28px;
-    }
-
-    .offcanvas .navbar-nav .nav-link {
-        font-size: 20px;
-    }
-
-    .botao-saida {
-        font-size: 18px;
-        height: 44px;
-        max-width: 300px;
-    }
-}
-
-/* Laptops e telas comuns */
-@media (max-width: 1440px) {
-    .offcanvas .offcanvas-title {
-        font-size: 24px;
-    }
-}
-
-/* Tablets grandes */
-@media (max-width: 1024px) {
-    .offcanvas {
-        width: 220px;
-    }
-
-    .offcanvas .offcanvas-title {
-        font-size: 22px;
-    }
-
-    .offcanvas .navbar-nav .nav-link {
-        font-size: 16px;
-    }
-
-    .botao-saida {
-        max-width: 200px;
-    }
-}
-
-/* Tablets pequenos */
-@media (max-width: 768px) {
-    .header .navbar .nav-links {
-        display: none;
-    }
-
-    .offcanvas {
-        width: 80%;
-    }
-
-    .offcanvas .offcanvas-title {
-        font-size: 20px;
-    }
-
-    .offcanvas .navbar-nav .nav-link {
-        font-size: 15px;
-    }
-
-    .botao-saida {
-        font-size: 15px;
-    }
-}
-
-/* Smartphones grandes */
-@media (max-width: 600px) {
-    .offcanvas .offcanvas-title {
-        font-size: 18px;
-    }
-
-    .offcanvas .navbar-nav .nav-link {
-        font-size: 14px;
-    }
-
-    .botao-saida {
-        font-size: 14px;
-        height: 36px;
-    }
-}
-
-/* Smartphones pequenos */
 @media (max-width: 400px) {
     .header{
         width: 100%;
@@ -236,10 +133,166 @@
     .botao-saida {
         font-size: 13px;
         height: 34px;
-        margin-top: 300px;
+        margin-top: 160%;
     }
     .logo{
         width: 30%;
         height: 50px;
+    }
+}
+
+@media (max-width: 500px){
+    .header {
+        width: 100vw;
+        gap: 60%;
+    }
+    #offcanvasNavbar {
+        height: 1080px;
+        top: 0px;
+        width: 200px;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 20px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .botao-saida {
+        font-size: 13px;
+        height: 34px;
+
+    }
+    .logo{
+        width: 30%;
+        height: 50px;
+    }
+}
+
+@media (max-width: 800px){
+    .header {
+        width: 100vw;
+        gap: 70%;
+    }
+    #offcanvasNavbar {
+        height: 1080px;
+        top: 0px;
+        width: 200px;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 20px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .botao-saida {
+        font-size: 13px;
+        height: 34px;
+
+    }
+    .logo{
+        width: 25%;
+        height: 60px;
+    }
+}
+
+@media (max-width: 900px){
+    .header {
+        width: 100%;
+        gap: 70%;
+    }
+    #offcanvasNavbar {
+        height: 100vh;
+        top: 0px;
+        width: 250px;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 20px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+
+    .botao-saida {
+        font-size: 20px;
+        height: 40px;
+        width: 60%;
+        margin-top: 600px;
+
+    }
+    .logo{
+        width: 20%;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1024px){
+    .header {
+        width: 100%;
+        gap: 75%;
+    }
+    #offcanvasNavbar {
+        height: 100vh;
+        top: 0px;
+        width: 250px;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 20px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+
+    .botao-saida {
+        font-size: 20px;
+        height: 40px;
+        width: 60%;
+        margin-top: 600px;
+
+    }
+    .logo{
+        width: 15%;
+        height: 50px;
+    }
+}
+
+@media (max-width: 1280px){
+    .header {
+        width: 100%;
+        gap: 85%;
+    }
+    #offcanvasNavbar {
+        height: 100vh;
+        top: 0px;
+        width: 250px;
+    }
+
+    .offcanvas .offcanvas-title {
+        font-size: 20px;
+    }
+
+    .offcanvas .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+
+    .botao-saida {
+        font-size: 20px;
+        height: 40px;
+        width: 60%;
+        margin-top: 400px;
+
+    }
+    .logo{
+        width: 10%;
+        height: 40px;
     }
 }

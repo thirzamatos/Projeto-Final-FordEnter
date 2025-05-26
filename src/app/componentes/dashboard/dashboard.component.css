@@ -3,7 +3,7 @@
   flex-direction: column;
   min-height: 100vh;
   padding: 15px;
-  padding-top: 7%;
+  padding-top: 1.5%;
   background-color: #efefef;
 }
 
@@ -48,7 +48,7 @@
   border-radius: 8px;
   width: 13%;
   height: 15%;
-  text-align: center;
+
 }
 
 .metric-label {
@@ -130,83 +130,236 @@
   cursor: pointer;
 }
 
-/*Responsividade*/
+/*RESPONSIVIDADE*/
 
-@media(max-width: 2000px){
-  .dashboard-title{
-    margin-top: 10px;
-  }
-
-  .vehicle-selection{
-    margin-left: 75px;
-  }
-
-  .dashboard-container{
-    padding: 5px;
-  }
-
-  .vehicle-image-container{
-    margin-top: 10px;
-  }
-
-  .vehicle-image{
-    width: 400px
-  }
-}
-
-@media(max-width: 1080px){
-  .dashboard-title{
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 900px) {
-  .dashboard-title{
-    margin-top: 15px;
-  }
-  .metric-box {
-    width: 30%;
-  }
-
-  .telemetry-table-container {
-    padding-left: 20px;
+@media (max-width: 400px){
+  .dashboard-container {
+    padding: 10px;
   }
 
   .vehicle-selection {
     width: 100%;
-    max-width: 300px;
   }
 
-  .dashboard-title {
-    font-size: 24px;
+  .vehicle-metrics{
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-/* Responsivo para celulares */
-@media (max-width: 560px) {
   .metric-box {
+    width: 50%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .vehicle-label {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .vehicle-select {
     width: 100%;
+    margin-left: 0;
   }
 
   .vehicle-image {
     width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
 
-  .vin-input,
-  .vin-search-button {
-    flex: 1 1 100%;
-    border-radius: 4px;
-  }
-
-  .vin-search-group {
-    flex-direction: column;
+  .telemetry-table-container {
+    padding-left: 0;
   }
 
   .telemetry-table {
-    font-size: 12px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px){
+  .dashboard-title {
+    font-size: 24px;
   }
 
+  .vehicle-metrics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metric-box {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .vehicle-select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .vehicle-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .telemetry-table-container{
+    padding-left: 0;
+  }
+
+  .telemetry-table th,
+  .telemetry-table td {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .vehicle-selection {
+    width: 100%;
+  }
+
+  .vehicle-metrics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metric-box {
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .vehicle-label {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .vehicle-select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .vehicle-image {
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .telemetry-table-container {
+    padding-left: 0;
+  }
+
+  .telemetry-table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
   .dashboard-title {
+    font-size: 22px;
+  }
+
+  .vehicle-metrics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metric-box {
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .metric-label{
     font-size: 20px;
+  }
+
+  .metric-value {
+    font-size: 24px;
+  }
+
+  small{
+    font-size: 20px;
+  }
+
+  .vehicle-label {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .vehicle-select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .vehicle-image {
+    width: 70%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .telemetry-table-container {
+    padding-left: 0;
+  }
+
+  .telemetry-table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard-title {
+    font-size: 30px;
+  }
+
+  .vehicle-metrics {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metric-box {
+    width: 80%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .metric-label{
+    font-size: 18px;
+  }
+
+  .metric-value {
+    font-size: 22px;
+  }
+
+  small{
+    font-size: 18px;
+  }
+
+  .vehicle-label {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .vehicle-select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .vehicle-image {
+    width: 60%;
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .telemetry-table-container {
+    padding-left: 0;
+  }
+
+  .telemetry-table {
+    width: 100%;
   }
 }

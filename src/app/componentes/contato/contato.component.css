@@ -1,5 +1,6 @@
 .contato-container{
   background-color: #efefef;
+  overflow: hidden;
 }
 
 main{
@@ -21,8 +22,8 @@ main{
 .title-h2{
   text-align: left;
   font-weight: 800;
-  font-size: 20px;
-  margin-left: 8px;
+  font-size: 16px;
+  margin: 0 0 0 8px;
   color: rgb(9, 9, 169);
 }
 
@@ -32,8 +33,8 @@ main{
   justify-content: flex-start;
   align-items: center;
   width: 500px;
-  height: 570px;
-  padding: 10px;
+  height: 500px;
+  padding: 0 5px 0 5px;
   border-radius: 8px;
   background: linear-gradient(145deg, #d4d4d4, #a6a6a6);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
@@ -55,17 +56,17 @@ main{
 }
 
 input.fordform{
-  height: 36px;
+  height: 30px;
 }
 
 select.fordform {
   width: 301px;
-  height: 36px;
+  height: 30px;
   color: #807d7d;
 }
 
 textarea.fordform{
-  height: 36px;
+  height: 30px;
 }
 
 input:focus-visible {
@@ -80,7 +81,7 @@ main div {
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 30px;
 }
 
@@ -131,152 +132,206 @@ main div {
   background-color: rgb(7, 7, 120);
 }
 
-@media (max-width: 1500px){
-  footer{
-      padding-bottom: 41px;
-  }
-}
+/*RESPONSIVIDADE*/
 
-@media (max-width: 1024px){
+@media (max-width: 400px){
+  main{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
   .img-form{
-      width: 400px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
   }
 
-  .title{
-      font-size: 26px;
-  }
-
-  .fordform{
-      width: 400px;
-  }
-
-  select.fordform{
-      width: 410px;
-  }
-
-  #notification{
-      width: 13px;
-      height: 13px;
-  }
-
-  .button-send{
-      width: 300px;
-      font-size: 16px;
-  }
-}
-
-@media (max-width: 820px){
-  .img-form{
-      width: 300px;
-  }
-
-  .title{
-      font-size: 20px;
-  }
-
-  .fordform{
-      width: 300px;
-  }
-
-  select.fordform{
-      width: 310px;
-  }
-
-  .button-send{
-      width: 200px;
-      font-size: 14px;
-  }
-}
-
-@media (max-width: 560px){
-  .img-form{
-      width: 250px;
-  }
-
-  .title{
-      font-size: 18px;
-      margin-left: 60px;
-  }
-
-  form{
-      font-size: 12px;
-  }
-
-  .fordform{
-      width: 250px;
-      margin-left: 60px;
-      font-size: 12px;
-  }
-
-  select.fordform{
-      width: 260px;
-      margin-left: 60px;
-  }
-
-  #notification{
-      width: 10px;
-      height: 10px;
-      margin-left: 60px;
-  }
-
-  .button-send{
-      width: 200px;
-      font-size: 12px;
-      margin-left: 90px;
-  }
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-  .contato {
-    max-width: 100%;
-  }
-
-  .fordform,
-  select.fordform,
-  .button-send {
-    max-width: 100%;
-  }
-
-  #notification {
-    width: 13px;
-    height: 13px;
-  }
-}
-
-@media (max-width: 600px) {
-  .title-h2 {
-    font-size: 18px;
+  .forms{
+    width: 100%;
+    align-items: center;
     text-align: center;
+    font-size: 12px;
+    padding-top: 0px;
+    font-weight: 400;
+  }
+
+  .contato{
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  select.fordform{
+    width: 100%;
   }
 
   .fordform {
-    font-size: 13px;
-  }
-
-  .button-send {
-    font-size: 14px;
-  }
-
-  #notification {
-    width: 11px;
-    height: 11px;
+    width: 100%;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 500px){
+  main{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .img-form{
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+  }
+
+  .forms{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 0px;
+    font-weight: 400;
+  }
+
+  .contato{
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 120px;
+    margin-left: 10px;
+  }
+
+  select.fordform{
+    width: 100%;
+  }
+
   .fordform {
-    font-size: 12px;
-    padding: 4px 8px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  main{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
 
-  .button-send {
-    font-size: 12px;
-    padding: 8px;
+  .img-form{
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
   }
 
-  #notification {
-    width: 10px;
-    height: 10px;
+  .forms{
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 0px;
+    font-weight: 400;
+  }
+
+  .contato{
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 120px;
+    margin-left: 10px;
+    padding-right: 40px;
+  }
+
+  select.fordform{
+    width: 100%;
+  }
+
+  .fordform {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  main{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .img-form{
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+  }
+
+  .forms{
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 0px;
+    font-weight: 400;
+  }
+
+  .contato{
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 120px;
+    margin-left: 10px;
+    padding-right: 40px;
+  }
+
+  select.fordform{
+    width: 100%;
+  }
+
+  .fordform {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  main{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .img-form{
+    width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+  }
+
+  .forms{
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 0px;
+    font-weight: 400;
+  }
+
+  .contato{
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 120px;
+    margin-left: 10px;
+    padding-right: 40px;
+  }
+
+  input.fordform{
+    font-size: 17px;
+  }
+
+  select.fordform{
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .fordform {
+    width: 100%;
   }
 }
