@@ -21,26 +21,38 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent {
+  showSuccessModal = false;
+  showErrorModal = false;
+  submittedName = '';
 
   post(form: NgForm): void {
+
+    console.log('Formulário enviado:');
+
     if (form.valid) {
       const data: Contato = form.value;
 
       // Salvar no Local Storage
       this.salvarNoLocalStorage(data);
-
-      // Mensagem de confirmação
       this.enviar(data);
 
       //Limpar o formulário
       form.resetForm();
     } else {
-      alert("Por favor, preencha todos os campos obrigatórios.");
+      this.showErrorModal = true;
+      console.log('Modal de erro', this.showErrorModal);
     }
   }
 
   enviar(data: Contato): void {
-    alert(`Obrigado sr(a) ${data.nome}, os seus dados foram encaminhados com sucesso.`);
+    this.submittedName = data.nome;
+    this.showSuccessModal = true;
+    console.log('Modal de sucesso', this.showSuccessModal);
+  }
+
+  closeModal(): void {
+    this.showSuccessModal = false;
+    this.showErrorModal = false;
   }
 
   salvarNoLocalStorage(data: Contato): void {
@@ -48,4 +60,6 @@ export class ContatoComponent {
     contatosSalvos.push(data);
     localStorage.setItem('contatos', JSON.stringify(contatosSalvos));
   }
+
+
 }

@@ -7,9 +7,9 @@
       <img src="https://api-fordenter-qstj.onrender.com/img/territory.png" class="img-form">
     </div>
     <div class="forms">
-      
+
       <div class="contato">
-        
+
           <h2 class="title-h2">Sobre Você</h2>
 
         <form #form="ngForm" (ngSubmit)="post(form)" novalidate>
@@ -50,7 +50,7 @@
             Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você.
             <br>A qualquer momento, será possível editar ou remover tais dados.
           </p>
-          
+
           <input type="checkbox" name="termos" required ngModel>
           Sim. Li e concordo com os
           <a href="https://www.ford.com.br/politica-de-privacidade/" id="priv-link">Termos e Condições.</a>
@@ -67,6 +67,27 @@
     </div>
   </main>
 
+  <app-footer></app-footer>
 </div>
 
-  <app-footer></app-footer>
+<div class="modal-backdrop" *ngIf="showSuccessModal">
+  <div class="modal">
+    <h2>Sucesso</h2>
+    <p>Obrigado Sr(a) {{ submittedName }}, os dados foram enviados com sucesso!</p>
+    <button (click)="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<div class="modal-backdrop" *ngIf="showErrorModal">
+  <div class="modal">
+    <h2>Erro</h2>
+    <p>Preencha todos os campos obrigatórios!</p>
+    <button (click)="closeModal()">Fechar</button>
+  </div>
+</div>
+
+
+
+
+
+
