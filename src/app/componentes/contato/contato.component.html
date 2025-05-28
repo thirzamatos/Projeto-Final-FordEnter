@@ -62,6 +62,15 @@
 
 
           <button type="submit" class="button-send" [disabled]="form.invalid">Enviar</button>
+
+          <p *ngIf="showSuccessMessage" class="message success">
+            Obrigado Sr(a) {{ submittedName }}, os dados foram enviados com sucesso!
+          </p>
+
+          <p *ngIf="showErrorMessage" class="message error">
+          Preencha todos os campos obrigatórios!
+          </p>
+
         </form>
       </div>
     </div>
@@ -69,25 +78,3 @@
 
   <app-footer></app-footer>
 </div>
-
-<div class="modal-backdrop" *ngIf="showSuccessModal">
-  <div class="modal">
-    <h2>Sucesso</h2>
-    <p>Obrigado Sr(a) {{ submittedName }}, os dados foram enviados com sucesso!</p>
-    <button (click)="closeModal()">Fechar</button>
-  </div>
-</div>
-
-<div class="modal-backdrop" *ngIf="showErrorModal">
-  <div class="modal">
-    <h2>Erro</h2>
-    <p>Preencha todos os campos obrigatórios!</p>
-    <button (click)="closeModal()">Fechar</button>
-  </div>
-</div>
-
-
-
-
-
-

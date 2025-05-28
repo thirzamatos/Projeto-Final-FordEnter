@@ -21,8 +21,8 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent {
-  showSuccessModal = false;
-  showErrorModal = false;
+  showSuccessMessage = false;
+  showErrorMessage = false;
   submittedName = '';
 
   post(form: NgForm): void {
@@ -39,20 +39,20 @@ export class ContatoComponent {
       //Limpar o formulário
       form.resetForm();
     } else {
-      this.showErrorModal = true;
-      console.log('Modal de erro', this.showErrorModal);
+      this.showErrorMessage = true;
+      setTimeout(() => this.closeMessage(), 5000);
     }
   }
 
   enviar(data: Contato): void {
     this.submittedName = data.nome;
-    this.showSuccessModal = true;
-    console.log('Modal de sucesso', this.showSuccessModal);
+    this.showSuccessMessage = true;
+    setTimeout(() => this.closeMessage(), 7000);
   }
 
-  closeModal(): void {
-    this.showSuccessModal = false;
-    this.showErrorModal = false;
+  closeMessage(): void {
+    this.showSuccessMessage = false;
+    this.showErrorMessage = false;
   }
 
   salvarNoLocalStorage(data: Contato): void {
